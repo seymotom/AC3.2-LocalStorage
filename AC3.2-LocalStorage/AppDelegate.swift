@@ -15,9 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    
-    // set up root view controllers!
-    
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let navVc = UINavigationController(rootViewController: LocalFilesViewController())
+        self.window?.rootViewController = navVc
+        self.window?.makeKeyAndVisible()
     return true
   }
 
